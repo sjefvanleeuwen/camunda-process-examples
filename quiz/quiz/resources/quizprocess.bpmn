@@ -4,24 +4,7 @@
     <bpmn2:startEvent id="StartEvent_1" name="Give answer">
       <bpmn2:outgoing>SequenceFlow_1</bpmn2:outgoing>
     </bpmn2:startEvent>
-    <bpmn2:serviceTask id="ServiceTask_1" name="Check if the answer is correct">
-      <bpmn2:extensionElements>
-        <camunda:connector>
-          <camunda:inputOutput>
-            <camunda:inputParameter name="url">https://raw.githubusercontent.com/sjefvanleeuwen/camunda-process-examples/master/quiz/rest/simple-response.json</camunda:inputParameter>
-            <camunda:inputParameter name="method">GET</camunda:inputParameter>
-            <camunda:inputParameter name="headers">
-              <camunda:map>
-                <camunda:entry key="Accept">application/json</camunda:entry>
-              </camunda:map>
-            </camunda:inputParameter>
-            <camunda:outputParameter name="correct">
-              <camunda:script scriptFormat="Javascript" resource="resources.parseAnswer.js" />
-            </camunda:outputParameter>
-          </camunda:inputOutput>
-          <camunda:connectorId>http-connector</camunda:connectorId>
-        </camunda:connector>
-      </bpmn2:extensionElements>
+    <bpmn2:serviceTask id="ServiceTask_1" name="Check if the answer is correct" camunda:type="external" camunda:topic="parseanswer">
       <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
     </bpmn2:serviceTask>
