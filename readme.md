@@ -11,7 +11,7 @@ You can model processes using camunda modeler available at: https://camunda.com/
 
 ## Quiz example
 
-The quiz example exposes a simple BPMN decision process which requests an external REST-API to pull in quiz data and then checks the answer in the json data using Javascript (script shipped into the camunda engine, see resources directory).
+The quiz example exposes a simple BPMN decision process which requests an external REST-API to pull in quiz data and then checks the answer in the json data using an external task written in c#.
 
 The javascript returns the boolean true/false based on a regex search pattern in the data.
 
