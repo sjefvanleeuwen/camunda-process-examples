@@ -7,6 +7,8 @@ These examples are based of from dotnet template over at:  https://github.com/sj
 docker run -d --name camunda -p 8080:8080 camunda/camunda-bpm-platform:latest
 ```
 
+You can model processes using camunda modeler available at: https://camunda.com/download/modeler/
+
 ## Quiz example
 
 The quiz example exposes a simple BPMN decision process which requests an external REST-API to pull in quiz data and then checks the answer in the json data using Javascript (script shipped into the camunda engine, see resources directory).
