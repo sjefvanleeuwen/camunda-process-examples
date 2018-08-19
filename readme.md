@@ -11,7 +11,7 @@ You can model processes using camunda modeler available at: https://camunda.com/
 
 ## Available Samples
 1. [Quiz example](quiz/readme.md)
-2. [Simple BMN Sample](basic-dmn/readme.md)
+2. [Simple DMN Sample](basic-dmn/readme.md)
 3. Discount ordering process (under construction)
 
 ## Built With
