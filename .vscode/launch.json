@@ -4,8 +4,43 @@
    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
    "version": "0.2.0",
    "configurations": [
+
         {
-            "name": ".NET Core Launch (console)",
+            "name": "Discount Process",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/discount/discount/bin/Debug/netcoreapp2.1/discount.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/discount/discount/bin/Debug/netcoreapp2.1/",
+            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Basic DMN Process",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/basic-dmn/basic-dmn/bin/Debug/netcoreapp2.1/basic-dmn.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/basic-dmn/basic-dmn/bin/Debug/netcoreapp2.1/",
+            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        },
+        {
+            "name": "Quiz Process",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
@@ -17,12 +52,6 @@
             "console": "internalConsole",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
-        },
-        {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
-            "request": "attach",
-            "processId": "${command:pickProcess}"
         }
-    ,]
+    ]
 }

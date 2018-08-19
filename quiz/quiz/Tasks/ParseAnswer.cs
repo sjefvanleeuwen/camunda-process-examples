@@ -8,6 +8,7 @@ using Newtonsoft.Json.Linq;
 
 namespace SimpleCalculationProcess
 {
+    
     [ExternalTaskTopic("parseanswer")]
 
     class PaserAnswer : IExternalTaskAdapter

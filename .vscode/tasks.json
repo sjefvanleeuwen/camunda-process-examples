@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/quiz/quiz/quiz.csproj"
+                "${workspaceFolder}/examples.sln"
             ],
             "problemMatcher": "$msCompile"
         }

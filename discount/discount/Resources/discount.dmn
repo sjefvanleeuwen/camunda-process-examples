@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="Definitions_14wptp1" name="DRD" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="discountDecision" name="Discount">
+    <decisionTable id="decisionTable_1">
+      <input id="input_1">
+        <inputExpression id="inputExpression_1" typeRef="double">
+          <text>orderTotal</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" name="orderDiscount" typeRef="double" />
+      <output id="OutputClause_05q1bjh" name="orderShipping" typeRef="string" />
+      <rule id="DecisionRule_04fkdil">
+        <inputEntry id="UnaryTests_198ku1n">
+          <text>[0..25]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ajdzec">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jommb1">
+          <text>6.50</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18ihcqo">
+        <inputEntry id="UnaryTests_0olsgot">
+          <text>[25..50]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nslq21">
+          <text>0.01</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l6gmym">
+          <text>2.50</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1pea2cp">
+        <inputEntry id="UnaryTests_1ufa2t0">
+          <text>[50..100]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17zgh0u">
+          <text>0.02</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tkdpza">
+          <text>1.50</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qjb7j5">
+        <inputEntry id="UnaryTests_1hojb3k">
+          <text>[100..150]</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q1ra8l">
+          <text>0.03</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06t5z2y">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qrnslx">
+        <inputEntry id="UnaryTests_0bmeis2">
+          <text>&gt; 150</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1n9wkui">
+          <text>0.04</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ap8mdr">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
