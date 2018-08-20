@@ -1,4 +1,5 @@
 # Camunda Process Examples
+[![Build Status](https://www.travis-ci.com/sjefvanleeuwen/camunda-process-examples.svg?branch=master)](https://www.travis-ci.com/sjefvanleeuwen/camunda-process-examples)
 
 These examples are based of from dotnet template over at:  https://github.com/sjefvanleeuwen/camunda-process-template
 
