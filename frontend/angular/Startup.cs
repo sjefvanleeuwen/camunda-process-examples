@@ -27,6 +27,8 @@ namespace angular
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +66,11 @@ namespace angular
                 {
                     spa.UseAngularCliServer(npmScript: "start");
                 }
+            });
+
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<angular.Controllers.SimpleTaskHub>("/hubs/simpletask");
             });
         }
     }
