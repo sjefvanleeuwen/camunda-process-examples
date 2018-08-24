@@ -1,5 +1,7 @@
 # Camunda Process Examples
 [![Build Status](https://www.travis-ci.com/sjefvanleeuwen/camunda-process-examples.svg?branch=master)](https://www.travis-ci.com/sjefvanleeuwen/camunda-process-examples)
+[![codecov](https://codecov.io/gh/sjefvanleeuwen/openxml-document-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/sjefvanleeuwen/openxml-document-generator)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 These examples are based of from dotnet template over at:  https://github.com/sjefvanleeuwen/camunda-process-template
 
