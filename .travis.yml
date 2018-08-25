@@ -1,3 +1,8 @@
 language: csharp
 solution: examples.sln
 mono: none
+install:
+- dotnet restore
+
+script:
+- dotnet build
