@@ -24,7 +24,7 @@ namespace SimpleCalculationProcess
                 Console.WriteLine(item.Key.ToString());
             }
             Console.WriteLine("------------------------");
-            JObject quiz = JObject.Parse(File.ReadAllText(@"..\rest\simple-response.json"));
+            JObject quiz = JObject.Parse(File.ReadAllText(@"../rest/simple-response.json"));
             var expected =  (string)quiz["quiz"]["sport"]["q1"]["answer"];
             Console.WriteLine("Expected answer:  " + expected);
             var result = string.Equals(expected, externalTask.Variables["answer"].Value);
