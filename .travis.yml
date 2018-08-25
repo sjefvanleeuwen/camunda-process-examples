@@ -1,6 +1,7 @@
 language: csharp
 solution: examples.sln
 mono: none
+dotnet: latest
 install:
 - dotnet restore
 
